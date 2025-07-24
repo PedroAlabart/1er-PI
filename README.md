@@ -1,9 +1,45 @@
-## Generacion de la BBDD
+# SoyHenry - Accenture PI Project
 
-Se uso completamente ORM de SQLAlchemy
+This repository contains all the code, notebooks, and documentation for the Data Engineering and Analytics project.
 
-databse_connection: se encarga de la conexion
-database_insertion: se encarga de insertar la data de los csv
-models: son los los modelos, las tablas de sqlalchemy
-table_creator: tiene la funcion que crea las tablas.
-database_facade: agrupa los archivos de arriba en un mismo archivo para su facil uso
+---
+
+## 🔗 Connection Structure
+
+- **database_connection.py**: Handles database connection using SQLAlchemy ORM.
+- **database_insertion.py**: Functions to insert data from CSV files into the database.
+- **models.py**: SQLAlchemy models representing the database tables.
+- **table_creator.py**: Functions to create tables in the database.
+- **database_facade.py**: Centralizes database operations for easier usage.
+
+More details about the database module can be found in [`database/README.md`](database/README.md).
+
+---
+
+## 📈 Avances Structure
+
+### Avance 1
+
+- **1er_avance_EDA.ipynb & EDA_helper.py**  
+  Data cleaning and exploratory analysis.  
+  Checks for duplicates, foreign key integrity, price consistency, and more.
+  
+- **preguntas_de_negocio.ipynb**  
+  Answers business questions, highlights questions that cannot be answered with the current data, and proposes new metrics.
+
+### Avance 2
+
+- **2do_avance.ipynb**  
+  Theoretical data modeling, including schema design, normalization, Slowly Changing Dimensions (SCD) and dimensional modeling concepts.
+
+### Avance 3 (in progress)
+
+
+
+---
+
+## 🚀 How to Use
+
+1. Configure your database connection in `config.py`.
+2. Run `1er_avance_EDA.py` to create and populate all tables.
+3. Explore and analyze the data using the provided notebooks.
