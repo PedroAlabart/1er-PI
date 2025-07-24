@@ -39,9 +39,9 @@ More details about the database module can be found in [`database/README.md`](da
 
 ### Avance 3 (in progress)
 
-La carpeta Ecommerce cuenta con la info de dbt.
-Tiene modelos de las tablas
-Y un modelo llamado agg_user_expenses que muestra a los usuarios ordenados por gastos total y tambien muestra su promedio de gastos
+The `Ecommerce` folder contains the dbt project setup.  
+It includes staging models for each table and a business mart model called `agg_user_expenses`, which ranks users by total spending and also shows their average expenses.  
+Data validation steps were implemented to exclude null values and ensure result accuracy.
 
 ---
 
