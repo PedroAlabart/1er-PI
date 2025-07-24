@@ -37,7 +37,7 @@ More details about the database module can be found in [`database/README.md`](da
 - **2do_avance.ipynb**  
   Theoretical data modeling, including schema design, normalization, Slowly Changing Dimensions (SCD) and dimensional modeling concepts.
 
-### Avance 3 (in progress)
+### Avance 3
 
 The `Ecommerce` folder contains the dbt project setup.  
 It includes staging models for each table and a business mart model called `agg_user_expenses`, which ranks users by total spending and also shows their average expenses.  
