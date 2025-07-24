@@ -16,6 +16,11 @@ More details about the database module can be found in [`database/README.md`](da
 
 ---
 
+## 🧪 Tests Structure
+- **test_database_connection.py**: Tests the database connection.
+
+---
+
 ## 📈 Avances Structure
 
 ### Avance 1
@@ -23,7 +28,7 @@ More details about the database module can be found in [`database/README.md`](da
 - **1er_avance_EDA.ipynb & EDA_helper.py**  
   Data cleaning and exploratory analysis.  
   Checks for duplicates, foreign key integrity, price consistency, and more.
-  
+
 - **preguntas_de_negocio.ipynb**  
   Answers business questions, highlights questions that cannot be answered with the current data, and proposes new metrics.
 
@@ -40,6 +45,7 @@ More details about the database module can be found in [`database/README.md`](da
 
 ## 🚀 How to Use
 
-1. Configure your database connection in `config.py`.
-2. Run `1er_avance_EDA.py` to create and populate all tables.
-3. Explore and analyze the data using the provided notebooks.
+1. Run pip install `requirements.txt`
+2. Configure your database connection in `config.py`.
+3. Run `1er_avance_EDA.py` to create and populate all tables.
+4. Explore and analyze the data using the provided notebooks.

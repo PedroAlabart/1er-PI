@@ -1,0 +1,44 @@
+
+version: 2
+
+models:
+  - name: stg_usuarios
+    description: "Modelo de staging para la tabla de usuarios"
+    columns:
+      - name: id
+        description: "Identificador único del usuario"
+      - name: nombre
+        description: "Nombre del usuario"
+      - name: email
+        description: "Correo electrónico del usuario"
+      - name: contrasena
+        description: "Contraseña del usuario (encriptada)"
+      - name: fecha_registro
+        description: "Fecha en que el usuario se registró en la plataforma"
+
+
+  - name: stg_ordenes
+    description: "Modelo de staging para la tabla de órdenes"
+    columns:
+      - name: id                                          
+        description: "Identificador único de la orden"
+      - name: usuario_id
+        description: "Identificador del usuario que realizó la orden"
+      - name: total
+        description: "Total de la orden"
+      - name: estado
+        description: "Estado de la orden (pendiente, completada, cancelada)"
+
+  - name: fact_user_expenses
+    description: "Modelo de hechos que calcula el total y promedio de gastos por usuario"
+    columns:
+      - name: usuario_id
+        description: "Identificador del usuario"
+      - name: nombre
+        description: "Nombre del usuario"
+      - name: apellido
+        description: "Apellido del usuario"
+      - name: total_acumulado
+        description: "Total acumulado de gastos del usuario"
+      - name: promedio_total
+        description: "Promedio de gastos del usuario"

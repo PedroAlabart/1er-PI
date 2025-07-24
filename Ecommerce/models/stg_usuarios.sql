@@ -1,0 +1,10 @@
+SELECT 
+    usuario_id, 
+    nombre, 
+    apellido, 
+    dni, 
+    email, 
+    contrasena, 
+    fecha_registro
+FROM 
+    usuarios
