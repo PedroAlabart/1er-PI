@@ -33,5 +33,6 @@ class DatabaseFacade:
     def close_session(self):
         self.session.close()
 
+print("Starting database setup...")
 db_fac = DatabaseFacade()
 db_fac.run()

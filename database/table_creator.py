@@ -9,3 +9,4 @@ def create_tables(engine: Engine):
 def drop_tables(engine: Engine):
     """Drops all tables in the database using SQLAlchemy."""
     Base.metadata.drop_all(engine)
+    print("All tables dropped successfully.")
