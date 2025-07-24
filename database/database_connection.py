@@ -1,7 +1,8 @@
 # database_connection.py
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
-import os
+from sqlalchemy.engine import Engine
+
 from config import DATABASE_URL
 
 
@@ -12,8 +13,11 @@ engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(bind=engine, class_=Session)
 
 # Funciones utilitarias
-def get_engine():
+def get_engine()-> Engine:
     return engine
 
 def get_session() -> Session:
     return SessionLocal()
+
+
+
