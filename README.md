@@ -39,10 +39,16 @@ More details about the database module can be found in [`database/README.md`](da
 
 ### Avance 3
 
-The `Ecommerce` folder contains the dbt project setup.  
+
+- **Ecommerce Folder**  
+The folder contains the dbt project setup.  
 It includes staging models for each table and a business mart model called `agg_user_expenses`, which ranks users by total spending and also shows their average expenses.  
 Data validation steps were implemented to exclude null values and ensure result accuracy.
 
+- **3er_avance_storytelling.ipynb**  
+Includes multiple graphs and visualizations for business insights.  
+Analyzes sales trends, user spending, payment method preferences, and order value distributions.  
+Provides actionable recommendations based on data
 ---
 
 ## 🚀 How to Use
