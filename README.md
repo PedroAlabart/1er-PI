@@ -39,7 +39,9 @@ More details about the database module can be found in [`database/README.md`](da
 
 ### Avance 3 (in progress)
 
-
+La carpeta Ecommerce cuenta con la info de dbt.
+Tiene modelos de las tablas
+Y un modelo llamado agg_user_expenses que muestra a los usuarios ordenados por gastos total y tambien muestra su promedio de gastos
 
 ---
 

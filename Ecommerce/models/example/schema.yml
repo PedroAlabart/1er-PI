@@ -7,14 +7,28 @@ models:
     columns:
       - name: id
         description: "Identificador único del usuario"
+        tests:
+          - unique
+          - not_null
       - name: nombre
         description: "Nombre del usuario"
+      - name: apellido
+        description: "Apellido del usuario"
+      - name: DNI
+        description: "Número de documento de identidad del usuario"
+        tests:
+          - unique
+          - not_null
       - name: email
         description: "Correo electrónico del usuario"
+        tests:
+          - unique
+          - not_null
       - name: contrasena
         description: "Contraseña del usuario (encriptada)"
       - name: fecha_registro
         description: "Fecha en que el usuario se registró en la plataforma"
+
 
 
   - name: stg_ordenes
@@ -22,14 +36,44 @@ models:
     columns:
       - name: id                                          
         description: "Identificador único de la orden"
+        tests:
+        - unique
+        - not_null
       - name: usuario_id
         description: "Identificador del usuario que realizó la orden"
       - name: total
         description: "Total de la orden"
       - name: estado
         description: "Estado de la orden (pendiente, completada, cancelada)"
+    
+  - name: stg_productos
+    description: "Modelo de staging para la tabla de productos"
+    columns:
+      - name: producto_id
+        description: "Identificador único del producto"
+        tests:
+          - unique
+          - not_null
+      - name: nombre
+        description: "Nombre del producto"
+        tests:
+          - not_null
+      - name: descripcion
+        description: "Descripción del producto"
+      - name: precio
+        description: "Precio del producto"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "precio > 0"
+      - name: stock
+        description: "Cantidad disponible del producto en stock"
+        tests:
+          - not_null
+      - name: categoria_id
+        description: "Identificador de la categoría a la que pertenece el producto"
 
-  - name: fact_user_expenses
+  - name: agg_user_expenses
     description: "Modelo de hechos que calcula el total y promedio de gastos por usuario"
     columns:
       - name: usuario_id

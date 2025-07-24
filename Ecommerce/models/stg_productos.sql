@@ -1,0 +1,9 @@
+SELECT 
+    producto_id, 
+    nombre, 
+    descripcion, 
+    precio, 
+    stock, 
+    categoria_id
+FROM 
+    productos
